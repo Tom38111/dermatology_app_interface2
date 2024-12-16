@@ -9,7 +9,7 @@ st.markdown("""# Dermatology app
 Given a skin image, it will predict if it is  malignant or benign using a model of IA""")
 
 
-image = Image.open('app/raw_data/dermatologie2.jpg')
+image = Image.open('raw_data/dermatologie2.jpg')
 st.image(image, caption='Melanoma check-up', use_container_width=True)
 
 with st.form(key='params_for_api'):
