@@ -9,8 +9,7 @@ st.image(image1, width=300)
 
 st.markdown('<span style="font-size: 24px;">The application that help you to know if something is wrong on your skin</span>', unsafe_allow_html=True)
 
-st.markdown("""## The application that help you to know if something is wrong on your skin
-Given a skin image, it will predict if it is malignant or benign using a model of IA""")
+st.markdown("""Given a skin image, it will predict if it is malignant or benign using a model of IA""")
 
 
 image = Image.open('raw_data/dermatologie2.jpg')
