@@ -36,4 +36,4 @@ if uploaded_file is not None:
 
     prediction = response.json()
 
-    st.header(f'Fare amount: ${round(prediction, 2)}')
+    st.header(f'Result: ${round(prediction, 2)}')
