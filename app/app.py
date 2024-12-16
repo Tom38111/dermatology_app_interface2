@@ -3,6 +3,7 @@ from PIL import Image
 
 import numpy as np
 import pandas as pd
+import requests
 
 image1 = Image.open('raw_data/dermatology_app.png')
 st.image(image1, width=400)
