@@ -21,7 +21,7 @@ with st.form(key='params_for_api'):
 
     st.radio('Please select a model of IA', ['Convolutional Neural Network (CNN)','Pre-trained model'])
 
-    st.markdown('''Please note that a dermatology app is not a diagnostic tool and cannot replace or substitute a visit to your doctor''')
+    st.markdown('''Please note that a dermatology app is not a diagnostic tool and cannot substitute a visit to your doctor''')
 
     st.form_submit_button('Make prediction')
 
