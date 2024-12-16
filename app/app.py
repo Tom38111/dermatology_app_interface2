@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 
 image1 = Image.open('raw_data/dermatology_app.png')
-st.image(image1, width=200)
+st.image(image1, width=300)
 
 st.markdown("""## The application that help you to know if something is wrong on your skin
 Given a skin image, it will predict if it is  malignant or benign using a model of IA""")
