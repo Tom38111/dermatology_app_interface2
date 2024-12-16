@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 import pandas as pd
 
-image1 = Image.open('raw_data/dermatology_app.jng')
+image1 = Image.open('raw_data/dermatology_app.png')
 st.image(image1, use_container_width=True)
 
 st.markdown("""# Dermatology app
