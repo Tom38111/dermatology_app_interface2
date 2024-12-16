@@ -30,11 +30,9 @@ if uploaded_file is not None:
 
     params = uploaded_file
 
-    dermatology_app_api_url = 'https://dermatology_app_api.lewagon.ai/predict'
+    dermatology_app_api_url = 'https://kitt.lewagon.com/camps/1867/challenges?path=07-ML-Ops%2F04-Predict-in-production%2F01-Build-your-API'
     response = requests.get(dermatology_app_api_url, params=params)
 
     prediction = response.json()
 
-    pred = prediction['???']
-
-    st.header(f'Fare amount: ${round(pred, 2)}')
+    st.header(f'Fare amount: ${round(prediction, 2)}')
