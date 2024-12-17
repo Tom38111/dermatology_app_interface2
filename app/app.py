@@ -24,14 +24,15 @@ with st.form(key='params_for_api'):
 
     st.markdown('''Please note that dermatology app is not a diagnostic tool and cannot substitute a visit to your doctor''')
 
+
     st.form_submit_button('Make prediction')
 
 
 if uploaded_file is not None:
 
     params = uploaded_file
+    os.write(1, f"{model_source}\n".encode())
 
-    print(model_source)
 
     '''dermatology_app_api_url = 'https://kitt.lewagon.com/camps/1867/challenges?path=07-ML-Ops%2F04-Predict-in-production%2F01-Build-your-API'
     response = requests.get(dermatology_app_api_url, params=params)
