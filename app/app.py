@@ -32,11 +32,3 @@ if uploaded_file is not None:
 
     params = uploaded_file
     os.write(1, f"{model_source}\n".encode())
-
-
-    '''dermatology_app_api_url = 'https://kitt.lewagon.com/camps/1867/challenges?path=07-ML-Ops%2F04-Predict-in-production%2F01-Build-your-API'
-    response = requests.get(dermatology_app_api_url, params=params)
-
-    prediction = response.json()
-
-    st.header(f'Result: ${round(prediction, 2)}')'''
