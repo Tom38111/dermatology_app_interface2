@@ -47,7 +47,7 @@ if submitted is not None and uploaded_file is not None:
 
     if model_type == 'Convolutional Neural Network (CNN) 2':
 
-        response = requests.get('https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_cnn_bis', image=image
+        response = requests.get('https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_cnn_bis', image=image)
 
         prediction = response.json()
 
