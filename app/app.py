@@ -39,7 +39,7 @@ if submitted is not None and uploaded_file is not None:
 
     if model_type == 'Convolutional Neural Network (CNN) 1':
 
-        response = requests.post('https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_cnn', data=image)
+        response = requests.post('https://dermatologyapp-325653398443.europe-west1.run.app/predict_cnn', data=image)
 
         prediction = response.json()
 
@@ -47,7 +47,7 @@ if submitted is not None and uploaded_file is not None:
 
     if model_type == 'Convolutional Neural Network (CNN) 2':
 
-        response = requests.post('https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_cnn_bis', data=image)
+        response = requests.post('https://dermatologyapp-325653398443.europe-west1.run.app/predict_cnn_bis', data=image)
 
         prediction = response.json()
 
@@ -55,7 +55,7 @@ if submitted is not None and uploaded_file is not None:
 
     if model_type == 'Pre-trained model':
 
-        response = requests.post('https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_ptm', data=image)
+        response = requests.post('https://dermatologyapp-325653398443.europe-west1.run.app/predict_ptm', data=image)
 
         prediction = response.json()
 
