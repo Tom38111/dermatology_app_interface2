@@ -32,12 +32,11 @@ with st.form(key='params_for_api'):
 if submitted is not None and uploaded_file is not None:
 
     st.image(uploaded_file, width=200)
+    st.write("Filename: ", uploaded_file.name)
 
     uploaded_file = uploaded_file.read()
 
     files = {'image': io.BytesIO(uploaded_file)}
-
-    print(files)
 
     dermatology_app_api_url_1 = 'https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_cnn'
     dermatology_app_api_url_2 = 'https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_cnn_bis'
