@@ -31,7 +31,7 @@ with st.form(key='params_for_api'):
 
 if submitted is not None and uploaded_file is not None:
 
-    image = image.open(uploaded_file)
+    image = Image.open(uploaded_file)
     os.write(1, f"{model_type}\n".encode())
 
     dermatology_app_api_url_1 = 'https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_cnn'
