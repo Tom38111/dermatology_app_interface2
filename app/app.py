@@ -38,10 +38,6 @@ if submitted is not None and uploaded_file is not None:
 
     files = {'image': io.BytesIO(uploaded_file)}
 
-    dermatology_app_api_url_1 = 'https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_cnn'
-    dermatology_app_api_url_2 = 'https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_cnn_bis'
-    dermatology_app_api_url_3 = 'https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_ptm'
-
     if model_type == 'Convolutional Neural Network (CNN) 1':
 
         st.write('Convolutional Neural Network (CNN) 1')
@@ -60,7 +56,7 @@ if submitted is not None and uploaded_file is not None:
 
         prediction = response.json()
 
-        st.markdown(f'<span style="font-size: 24px;">{prediction['answer']}</span>', unsafe_allow_html=True)
+        st.markdown(f'<span style="font-size: 24px;">:blue[{prediction['answer']}]</span>', unsafe_allow_html=True)
 
     if model_type == 'Pre-trained model':
 
