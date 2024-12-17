@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import requests
 
+
 image1 = Image.open('raw_data/dermatology_app.png')
 st.image(image1, width=400)
 
@@ -30,7 +31,7 @@ with st.form(key='params_for_api'):
 
 if submitted is not None and uploaded_file is not None:
 
-    image = uploaded_file
+    image = image.open(uploaded_file)
     os.write(1, f"{model_type}\n".encode())
 
     dermatology_app_api_url_1 = 'https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_cnn'
