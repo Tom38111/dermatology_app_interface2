@@ -36,7 +36,7 @@ if uploaded_file is not None:
     dermatology_app_api_url_1 = 'https://kitt.lewagon.com/camps/1867/challenges?path=07-ML-Ops%2F04-Predict-in-production%2F01-Build-your-API'
     dermatology_app_api_url_2 = 'https://kitt.lewagon.com/camps/1867/challenges?path=07-ML-Ops%2F04-Predict-in-production%2F01-Build-your-API'
 
-    if model_type = 'Convolutional Neural Network (CNN)':
+    if model_type == 'Convolutional Neural Network (CNN)':
 
         response = requests.get(dermatology_app_api_url_1, params=params)
 
@@ -44,7 +44,7 @@ if uploaded_file is not None:
 
         st.header(f'Result: ${round(prediction, 2)}')
 
-    if model_type = 'Pre-trained model':
+    if model_type == 'Pre-trained model':
 
         response = requests.get(dermatology_app_api_url_2, params=params)
 
