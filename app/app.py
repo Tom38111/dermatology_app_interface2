@@ -13,9 +13,16 @@ st.markdown('<span style="font-size: 23px;">The application that help you to kno
 
 st.markdown("""Given a skin image, it will predict if it is malignant or benign using a model of IA""")
 
-
 image = Image.open('raw_data/dermatologie2.jpg')
 st.image(image, caption='Melanoma check-up', use_container_width=True)
+
+image2 = Image.open('raw_data/melanoma_13.jpg')
+image3 = Image.open('raw_data/melanoma_11.jpg')
+image4 = Image.open('raw_data/melanoma_0.jpg')
+
+st.image(image2, width=200)
+st.image(image3, width=200)
+st.image(image4, width=200)
 
 with st.form(key='params_for_api'):
 
