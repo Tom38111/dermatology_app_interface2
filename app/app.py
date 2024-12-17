@@ -25,10 +25,10 @@ with st.form(key='params_for_api'):
     st.markdown('''Please note that dermatology app is not a diagnostic tool and cannot substitute a visit to your doctor''')
 
 
-    st.form_submit_button('Make prediction')
+    submitted = st.form_submit_button('Make prediction')
 
 
-if uploaded_file is not None:
+if submitted is not None and uploaded_file is not None:
 
     params = uploaded_file
     os.write(1, f"{model_type}\n".encode())
