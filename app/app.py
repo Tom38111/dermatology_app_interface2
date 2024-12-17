@@ -31,9 +31,6 @@ with st.form(key='params_for_api'):
 
 if submitted is not None and uploaded_file is not None:
 
-    ''' image = Image.open(uploaded_file)'''
-    os.write(1, f"{model_type}\n".encode())
-
     st.image(uploaded_file, width=200)
 
     uploaded_file = uploaded_file.read()
@@ -48,6 +45,8 @@ if submitted is not None and uploaded_file is not None:
 
     if model_type == 'Convolutional Neural Network (CNN) 1':
 
+        st.write('Convolutional Neural Network (CNN) 1')
+
         response = requests.post('https://dermatologyapp-325653398443.europe-west1.run.app/predict_cnn', files=files)
 
         prediction = response.json()
@@ -56,6 +55,8 @@ if submitted is not None and uploaded_file is not None:
 
     if model_type == 'Convolutional Neural Network (CNN) 2':
 
+        st.write('Convolutional Neural Network (CNN) 2')
+
         response = requests.post('https://dermatologyapp-325653398443.europe-west1.run.app/predict_cnn_bis', files=files)
 
         prediction = response.json()
@@ -63,6 +64,8 @@ if submitted is not None and uploaded_file is not None:
         st.write(prediction['answer'])
 
     if model_type == 'Pre-trained model':
+
+        st.write('Pre-trained model')
 
         response = requests.post('https://dermatologyapp-325653398443.europe-west1.run.app/predict_ptm', files=files)
 
