@@ -33,6 +33,9 @@ if submitted is not None and uploaded_file is not None:
 
     ''' image = Image.open(uploaded_file)'''
     os.write(1, f"{model_type}\n".encode())
+
+    st.image(uploaded_file, width=200)
+
     uploaded_file = uploaded_file.read()
 
     files = {'image': io.BytesIO(uploaded_file)}
@@ -49,7 +52,7 @@ if submitted is not None and uploaded_file is not None:
 
         prediction = response.json()
 
-        st.header(prediction)
+        st.write(prediction['answer'])
 
     if model_type == 'Convolutional Neural Network (CNN) 2':
 
@@ -57,7 +60,7 @@ if submitted is not None and uploaded_file is not None:
 
         prediction = response.json()
 
-        st.header(prediction)
+        st.write(prediction['answer'])
 
     if model_type == 'Pre-trained model':
 
@@ -65,4 +68,4 @@ if submitted is not None and uploaded_file is not None:
 
         prediction = response.json()
 
-        st.header(prediction)
+        st.write(prediction['answer'])
