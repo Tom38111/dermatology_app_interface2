@@ -24,7 +24,7 @@ with st.form(key='params_for_api'):
 
     uploaded_file = st.file_uploader('Please paste a skin image')
 
-    st.markdown('<span style="font-size: 10px;">If you do not have a skin picture, drag and drop one of these images</span>', unsafe_allow_html=True)
+    st.markdown('<span style="font-size: 15px;">If you do not have a skin picture, drag and drop one of these images</span>', unsafe_allow_html=True)
     st.image((image2, image3, image4), width=100)
 
     model_type = st.radio('Please select a model of IA', ['Convolutional Neural Network (CNN) 1','Convolutional Neural Network (CNN) 2','Pre-trained model'])
