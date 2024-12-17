@@ -34,13 +34,15 @@ if submitted is not None and uploaded_file is not None:
     image = Image.open(uploaded_file)
     os.write(1, f"{model_type}\n".encode())
 
+    files = {'image': open(uploaded_file, 'rb')}
+
     dermatology_app_api_url_1 = 'https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_cnn'
     dermatology_app_api_url_2 = 'https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_cnn_bis'
     dermatology_app_api_url_3 = 'https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_ptm'
 
     if model_type == 'Convolutional Neural Network (CNN) 1':
 
-        response = requests.post('https://dermatologyapp-325653398443.europe-west1.run.app/predict_cnn', data=image)
+        response = requests.post('https://dermatologyapp-325653398443.europe-west1.run.app/predict_cnn', files=files)
 
         prediction = response.json()
 
@@ -48,7 +50,7 @@ if submitted is not None and uploaded_file is not None:
 
     if model_type == 'Convolutional Neural Network (CNN) 2':
 
-        response = requests.post('https://dermatologyapp-325653398443.europe-west1.run.app/predict_cnn_bis', data=image)
+        response = requests.post('https://dermatologyapp-325653398443.europe-west1.run.app/predict_cnn_bis', files=files)
 
         prediction = response.json()
 
@@ -56,7 +58,7 @@ if submitted is not None and uploaded_file is not None:
 
     if model_type == 'Pre-trained model':
 
-        response = requests.post('https://dermatologyapp-325653398443.europe-west1.run.app/predict_ptm', data=image)
+        response = requests.post('https://dermatologyapp-325653398443.europe-west1.run.app/predict_ptm', files=files)
 
         prediction = response.json()
 
