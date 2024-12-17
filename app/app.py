@@ -43,7 +43,7 @@ if uploaded_file is not None:
 
         prediction = response.json()
 
-        st.header(f'Result: ${round(prediction, 2)}')
+        st.write(prediction)
 
     if model_type == 'Convolutional Neural Network (CNN) 2':
 
@@ -51,7 +51,7 @@ if uploaded_file is not None:
 
         prediction = response.json()
 
-        st.header(f'Result: ${round(prediction, 2)}')
+        st.write(prediction)
 
     if model_type == 'Pre-trained model':
 
@@ -59,4 +59,4 @@ if uploaded_file is not None:
 
         prediction = response.json()
 
-        st.header(f'Result: ${round(prediction, 2)}')
+        st.write(prediction)
