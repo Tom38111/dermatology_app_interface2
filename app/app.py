@@ -35,8 +35,6 @@ if submitted is not None and uploaded_file is not None:
     os.write(1, f"{model_type}\n".encode())
     uploaded_file = uploaded_file.read()
 
-    print(uploaded_file.type)
-
     files = {'image': Image.open(io.BytesIO(uploaded_file)).convert("RGB")}
 
     print(files)
