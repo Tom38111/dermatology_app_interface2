@@ -33,9 +33,9 @@ if uploaded_file is not None:
     params = uploaded_file
     os.write(1, f"{model_type}\n".encode())
 
-    dermatology_app_api_url_1 = 'https://kitt.lewagon.com/camps/1867/challenges?path=07-ML-Ops%2F04-Predict-in-production%2F01-Build-your-API'
-    dermatology_app_api_url_2 = 'https://kitt.lewagon.com/camps/1867/challenges?path=07-ML-Ops%2F04-Predict-in-production%2F01-Build-your-API'
-    dermatology_app_api_url_3 = 'https://kitt.lewagon.com/camps/1867/challenges?path=07-ML-Ops%2F04-Predict-in-production%2F01-Build-your-API'
+    dermatology_app_api_url_1 = 'https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_cnn'
+    dermatology_app_api_url_2 = 'https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_cnn_bis'
+    dermatology_app_api_url_3 = 'https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_ptm'
 
     if model_type == 'Convolutional Neural Network (CNN) 1':
 
