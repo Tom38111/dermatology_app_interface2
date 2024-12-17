@@ -39,7 +39,7 @@ if submitted is not None and uploaded_file is not None:
 
     if model_type == 'Convolutional Neural Network (CNN) 1':
 
-        response = requests.get('dermatology_app_api_url_1', params=params)
+        response = requests.get('https://dermatologyapp-325653398443.europe-west1.run.app/docs/predict_cnn', params=params)
 
         prediction = response.json()
 
