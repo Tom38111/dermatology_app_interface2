@@ -20,7 +20,7 @@ with st.form(key='params_for_api'):
 
     uploaded_file = st.file_uploader('Please paste a skin image')
 
-    model_source = st.radio('Please select a model of IA', ['Convolutional Neural Network (CNN)','Pre-trained model'])
+    model_type = st.radio('Please select a model of IA', ['Convolutional Neural Network (CNN)','Pre-trained model'])
 
     st.markdown('''Please note that dermatology app is not a diagnostic tool and cannot substitute a visit to your doctor''')
 
@@ -32,3 +32,22 @@ if uploaded_file is not None:
 
     params = uploaded_file
     os.write(1, f"{model_source}\n".encode())
+
+    dermatology_app_api_url_1 = 'https://kitt.lewagon.com/camps/1867/challenges?path=07-ML-Ops%2F04-Predict-in-production%2F01-Build-your-API'
+    dermatology_app_api_url_2 = 'https://kitt.lewagon.com/camps/1867/challenges?path=07-ML-Ops%2F04-Predict-in-production%2F01-Build-your-API'
+
+    if model_type = 'Convolutional Neural Network (CNN)':
+
+        response = requests.get(dermatology_app_api_url_1, params=params)
+
+        prediction = response.json()
+
+        st.header(f'Result: ${round(prediction, 2)}')
+
+    if model_type = 'Pre-trained model':
+
+        response = requests.get(dermatology_app_api_url_2, params=params)
+
+        prediction = response.json()
+
+        st.header(f'Result: ${round(prediction, 2)}')
