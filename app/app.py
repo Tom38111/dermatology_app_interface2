@@ -31,7 +31,7 @@ with st.form(key='params_for_api'):
 
 if submitted is not None and uploaded_file is not None:
 
-    image = Image.open(uploaded_file)
+    ''' image = Image.open(uploaded_file)'''
     os.write(1, f"{model_type}\n".encode())
 
     files = {'image': Image.open(io.BytesIO(uploaded_file)).convert("RGB")}
