@@ -51,8 +51,7 @@ if submitted is not None and uploaded_file is not None:
 
         prediction = response.json()
 
-        st.write(prediction['answer'])
-        st.markdown(f'<span style="font-size: 24px;">{prediction['answer']}</span>', unsafe_allow_html=True)
+        st.markdown(f'<span style="font-size: 20px;">{prediction['answer']}</span>', unsafe_allow_html=True)
 
     if model_type == 'Convolutional Neural Network (CNN) 2':
 
@@ -62,7 +61,7 @@ if submitted is not None and uploaded_file is not None:
 
         prediction = response.json()
 
-        st.write(prediction['answer'])
+        st.markdown(f'<span style="font-size: 20px;">{prediction['answer']}</span>', unsafe_allow_html=True)
 
     if model_type == 'Pre-trained model':
 
@@ -72,4 +71,4 @@ if submitted is not None and uploaded_file is not None:
 
         prediction = response.json()
 
-        st.write(prediction['answer'])
+        st.markdown(f'<span style="font-size: 20px;">{prediction['answer']}</span>', unsafe_allow_html=True)
