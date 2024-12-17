@@ -43,7 +43,7 @@ if submitted is not None and uploaded_file is not None:
 
         prediction = response.json()
 
-        st.write(prediction)
+        st.header(prediction)
 
     if model_type == 'Convolutional Neural Network (CNN) 2':
 
@@ -51,7 +51,7 @@ if submitted is not None and uploaded_file is not None:
 
         prediction = response.json()
 
-        st.write(prediction)
+        st.header(prediction)
 
     if model_type == 'Pre-trained model':
 
@@ -59,4 +59,4 @@ if submitted is not None and uploaded_file is not None:
 
         prediction = response.json()
 
-        st.write(prediction)
+        st.header(prediction)
