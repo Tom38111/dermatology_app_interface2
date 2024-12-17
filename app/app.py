@@ -33,6 +33,7 @@ if submitted is not None and uploaded_file is not None:
 
     ''' image = Image.open(uploaded_file)'''
     os.write(1, f"{model_type}\n".encode())
+    uploaded_file = uploaded_file.read()
 
     print(uploaded_file.type)
 
