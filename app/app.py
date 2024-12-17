@@ -20,7 +20,7 @@ image2 = Image.open('raw_data/melanoma_13.jpg')
 image3 = Image.open('raw_data/melanoma_11.jpg')
 image4 = Image.open('raw_data/melanoma_0.jpg')
 
-st.image(image2, width=200)
+st.image((image2, image3, image4), width=200)
 st.image(image3, width=200)
 st.image(image4, width=200)
 
