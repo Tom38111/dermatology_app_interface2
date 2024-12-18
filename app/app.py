@@ -7,7 +7,8 @@ import requests
 import io
 
 image1 = Image.open('raw_data/dermatology_app.png')
-st.image(image1, width=400)
+image5 = Image.open('raw_data/white_image.png')
+st.image((image5,image1), width=400)
 
 st.markdown('<span style="font-size: 23px;">The application that help you to know if something is wrong on your skin</span>', unsafe_allow_html=True)
 
