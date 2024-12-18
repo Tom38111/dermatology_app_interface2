@@ -74,4 +74,4 @@ if submitted is not None and uploaded_file is not None:
         st.markdown(f'<span style="font-size: 24px;">:blue[{prediction['answer']}]</span>', unsafe_allow_html=True)
 
 else:
-    st.write('Please load an image (.jpg or .png)')
+    st.write(f"\n❌Incorrect file. Please load an image (jpg or png)")
