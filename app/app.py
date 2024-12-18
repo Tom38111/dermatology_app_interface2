@@ -22,7 +22,7 @@ image4 = Image.open('raw_data/melanoma_0.jpg')
 
 with st.form(key='params_for_api'):
 
-    uploaded_file = st.file_uploader('1 - Please paste a skin image')
+    uploaded_file = st.file_uploader('1 - Please paste a skin image', type=["jpg", "png"])
 
     st.markdown('<span style="font-size: 14px;">If you do not have a skin picture, drag and drop one of these images</span>', unsafe_allow_html=True)
     st.image((image2, image3, image4), width=100)
@@ -30,7 +30,6 @@ with st.form(key='params_for_api'):
     model_type = st.radio('2 - Please select a model of IA', ['Convolutional Neural Network (CNN) 1','Convolutional Neural Network (CNN) 2','Pre-trained model'])
 
     st.markdown('''Please note that dermatology app is not a diagnostic tool and cannot substitute a visit to your doctor''')
-
 
     submitted = st.form_submit_button('Make prediction')
 
@@ -73,3 +72,6 @@ if submitted is not None and uploaded_file is not None:
         prediction = response.json()
 
         st.markdown(f'<span style="font-size: 24px;">:blue[{prediction['answer']}]</span>', unsafe_allow_html=True)
+
+else:
+    st.write('Please load an image (.jpg or .png)')
