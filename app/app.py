@@ -22,7 +22,7 @@ image4 = Image.open('raw_data/melanoma_0.jpg')
 
 with st.form(key='params_for_api'):
 
-    uploaded_file = st.file_uploader('1 - Please paste a skin image', type=["jpg", "png"])
+    uploaded_file = st.file_uploader('1 - Please paste a skin image', type=["jpg", "png", "jpeg"])
 
     st.markdown('<span style="font-size: 14px;">If you do not have a skin picture, drag and drop one of these images</span>', unsafe_allow_html=True)
     st.image((image2, image3, image4), width=100)
@@ -74,4 +74,4 @@ if submitted is not None and uploaded_file is not None:
         st.markdown(f'<span style="font-size: 24px;">:blue[{prediction['answer']}]</span>', unsafe_allow_html=True)
 
 else:
-    st.write(f"\n❌Incorrect file. Please load an image (jpg or png)")
+    st.write(f"\n❌Incorrect file. Please load an image (jpg, jpeg or png)")
